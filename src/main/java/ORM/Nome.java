@@ -1,4 +1,9 @@
 package ORM;
 
-public class Nome {
+public record Nome(String nome) {
+    public Nome {
+        if (nome != null) {
+            throw new IllegalArgumentException("Email inválido.");
+        }
+    }
 }

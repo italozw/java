@@ -1,4 +1,9 @@
 package ORM;
 
-public class Telefone {
+public record Telefone(String telefone) {
+    public Telefone {
+        if (telefone != null) {
+            throw new IllegalArgumentException("telefone inválido.");
+        }
+    }
 }
